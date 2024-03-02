@@ -1,4 +1,4 @@
-public class App {
+public class Client {
     // https://drive.google.com/file/d/1MApmfp-kgE_qXWbt7_pjvVnoA__W_8-U/view?usp=sharing
     public static void main(String[] args) throws Exception {
         ICandyFactory kakau = new KakauShoes();

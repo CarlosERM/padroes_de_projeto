@@ -1,4 +1,4 @@
-public class App {
+public class Client {
     // https://drive.google.com/file/d/1nn0Opf5TCvQ9PwV49nBHB3Ob8Fw3f3bP/view?usp=sharing
     public static void main(String[] args) throws Exception {
         IMythosFactory greek = new GreekMythosFactory();
