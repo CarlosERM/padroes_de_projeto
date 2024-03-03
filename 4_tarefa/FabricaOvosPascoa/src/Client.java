@@ -1,57 +1,133 @@
+import FabricaHersheys.FabricaHersheys;
+import FabricaLacta.FabricaLacta;
+import FabricaNestle.FabricaNestle;
+import FabricaRocher.FabricaRocher;
+import Interfaces.IFabricaOvosPascoa;
+import Interfaces.IOvoGrande;
+import Interfaces.IOvoMedio;
+import Interfaces.IOvoPequeno;
+
+import java.util.Scanner;
+
+import FabricaGaroto.FabricaGaroto;
 public class Client {
-// Entregar o código via GitHub aqui até o dia 06/03
-// Aberto: quarta, 13 abr 2022, 00:00
-// Vencimento: quarta, 6 mar 2024, 23:59
-// Você foi contratado para programar uma aplicação para uma distribuidora de ovos de páscoa.
+    public static void printAllOptions() {
+        System.out.println("-----------------------------");
+            System.out.println("     ESTOQUE DE PRODUTOS     ");
+            System.out.println("-----------------------------");
+            System.out.println("1 - OVO ALPINO (337g)");
+            System.out.println("2 - OVO CLASSIC (185g)");
+            System.out.println("3 - OVO KIT KAT (227g)");
+            System.out.println("4 - OVO CROCANTE (215g)");
+            System.out.println("5 - OVO BATON LEITE (350g)");
+            System.out.println("6 - OVO TALENTO (172g)");
+            System.out.println("7 - OVO AO LEITE (170g)");
+            System.out.println("8 - OVO OREO (257g)");
+            System.out.println("9 - OVO SONHO VALSA (277g)");
+            System.out.println("10 - OVO BIS");
+            System.out.println("11 - OVO CARIBE");
+            System.out.println("12 - OVO OURO BRANCO");
+            System.out.println("13 - OVO HERSHEY'S (137g)");
+            System.out.println("14 - OVO HERSHEY'S (225g)");
+            System.out.println("15 - OVO HERSHEY'S (336g)");
+            System.out.println("16 - OVO FERRERO ROCHER (137g)");
+            System.out.println("17 - OVO FERRERO ROCHER (255g)");
+            System.out.println("18 - OVO FERRERO ROCHER (366g)");
+            System.out.println("-1 - DESLIGAR PROGRAMA");
+    }
 
-// A distribuidora compra ovos de páscoa produzidos por 3 fábricas: Nestle, Garoto, Lacta
-// As fábricas produzem os seguintes modelos de ovos de páscoa:
-
-// Nestle: 1) Alpino 337g 2) Classic 185g 3) Kit Kat 227g
-// Garoto: 1) Crocante 215g 2) Talento 350g 3) Baton ao leite 172g
-// Lacta: 1) A leite 170g 2) Oreo 257g 3) Sonho de Valsa 277g
-
-// Nela o operador vai fornecer um código do produto que ele quer e vai ser impresso as informações do referente produto.
-
-// Feito isso atualize seu software para incluir os seguintes produtos: Bis (nestle), Caribe (garoto)  e Ouro Branco (Lacta), além das fábrias da Hershey's e Ferreiro, que produzem os seguintes ovos de páscoa:
-
-// Hershey's: 1) Hershey's 137g 2) Hershey's 225g 3) Hershey's 336g
-// Ferreiro: 1) Ferreiro Rocher 137g 2) Ferreiro Rocher 255g 3) Ferreiro Rocher 366g
-
-// Obs 1.: Pesquise na Internet algumas informações sobre cada produto, de forma que o mesmo tenha pelo menos 5 informações para ser exibida na aplicação.
-// Obs 2.: Obrigatório uso do padrão Abstract Factory. Faça seu código Levando em consideração os princípios de programação SOLID.
     public static void main(String[] args) throws Exception {
         IFabricaOvosPascoa nestle = new FabricaNestle();
-        IOvoPequeno ovoClassic = nestle.createOvoPequeno();
-        IOvoMedio ovoKitkat = nestle.createOvoMedio();
-        IOvoGrande ovoAlpino = nestle.createOvoGrande();
-
-        System.out.println(ovoClassic.infoOvoPequeno());
-        System.out.println();
-        System.out.println(ovoKitkat.infoOvoMedio());
-        System.out.println();
-        System.out.println(ovoAlpino.infoOvoGrande());
-
         IFabricaOvosPascoa garoto = new FabricaGaroto();
-        IOvoPequeno ovoBaton = garoto.createOvoPequeno();
-        IOvoMedio ovoCrocante = garoto.createOvoMedio();
-        IOvoGrande ovoTalento = garoto.createOvoGrande();
-
-        System.out.println(ovoBaton.infoOvoPequeno());
-        System.out.println();
-        System.out.println(ovoCrocante.infoOvoMedio());
-        System.out.println();
-        System.out.println(ovoTalento.infoOvoGrande());
-
         IFabricaOvosPascoa lacta = new FabricaLacta();
-        IOvoPequeno ovoLeite = lacta.createOvoPequeno();
-        IOvoMedio ovoOreo = lacta.createOvoMedio();
-        IOvoGrande ovoValsa = lacta.createOvoGrande();
+        IFabricaOvosPascoa hersheys = new FabricaHersheys();
+        IFabricaOvosPascoa rocher = new FabricaRocher();
 
-        System.out.println(ovoLeite.infoOvoPequeno());
-        System.out.println();
-        System.out.println(ovoOreo.infoOvoMedio());
-        System.out.println();
-        System.out.println(ovoValsa.infoOvoGrande());
+        Scanner input = new Scanner(System.in);
+        String resp = "0";
+        do {
+            printAllOptions();
+            resp = input.nextLine();
+            switch (resp) {
+                case "1":
+                    IOvoGrande ovoAlpino = nestle.createOvoGrande();
+                    System.out.println(ovoAlpino.infoOvoGrande());
+                    break;
+                case "2":
+                    IOvoPequeno ovoClassic = nestle.createOvoPequeno();
+                    System.out.println(ovoClassic.infoOvoPequeno());
+                    break;
+                case "3":
+                    IOvoMedio ovoKitkat = nestle.createOvoMedio();
+                    System.out.println(ovoKitkat.infoOvoMedio());
+                    break;
+                case "4":
+                    IOvoMedio ovoCrocante = garoto.createOvoMedio();
+                    System.out.println(ovoCrocante.infoOvoMedio());
+                    break;
+                case "5":
+                    IOvoPequeno ovoBaton = garoto.createOvoPequeno();
+                    System.out.println(ovoBaton.infoOvoPequeno());
+                    break;
+                case "6":
+                    IOvoGrande ovoTalento = garoto.createOvoGrande();
+                    System.out.println(ovoTalento.infoOvoGrande());
+                    break;
+                case "7":
+                    IOvoPequeno ovoLeite = lacta.createOvoPequeno();
+                    System.out.println(ovoLeite.infoOvoPequeno());
+                    break;
+                case "8":
+                    IOvoMedio ovoOreo = lacta.createOvoMedio();
+                    System.out.println(ovoOreo.infoOvoMedio());
+                    break;
+                case "9":
+                    IOvoGrande ovoValsa = lacta.createOvoGrande();
+                    System.out.println(ovoValsa.infoOvoGrande());
+                    break;
+                case "10":
+                    IOvoGrande ovoVBis = ((FabricaLacta) lacta).createOvoGrandeBis();
+                    System.out.println(ovoVBis.infoOvoGrande());
+                    break;
+                case "11":
+                    IOvoMedio ovoCaribe = ((FabricaGaroto) garoto).createOvoMedioCaribe();
+                    System.out.println(ovoCaribe.infoOvoMedio());
+                    break;
+                case "12":
+                    IOvoGrande ovoOuroBranco = ((FabricaNestle) nestle).createOvoGrandeOuroBranco();
+                    System.out.println(ovoOuroBranco.infoOvoGrande());
+                    break;
+                case "13":
+                    IOvoPequeno ovoHersheysPequeno = hersheys.createOvoPequeno();
+                    System.out.println(ovoHersheysPequeno.infoOvoPequeno());
+                    break;
+                case "14":
+                    IOvoMedio ovoHersheysMedio = hersheys.createOvoMedio();
+                    System.out.println(ovoHersheysMedio.infoOvoMedio());
+                    break;
+                case "15":
+                    IOvoGrande ovoHersheysGrande = hersheys.createOvoGrande();
+                    System.out.println(ovoHersheysGrande.infoOvoGrande());
+                    break;
+                case "16":
+                    IOvoPequeno ovoRocherPequeno = rocher.createOvoPequeno();
+                    System.out.println(ovoRocherPequeno.infoOvoPequeno());
+                    break;
+                case "17":
+                    IOvoMedio ovoRocherMedio = rocher.createOvoMedio();
+                    System.out.println(ovoRocherMedio.infoOvoMedio());
+                    break;
+                case "18":
+                    IOvoGrande ovoRocherGrande = rocher.createOvoGrande();
+                    System.out.println(ovoRocherGrande.infoOvoGrande());
+                    break;
+                default:
+                    System.out.println("SELECIONE UM DOS VALORES VÁLIDOS!");
+                    break;
+            }
+          
+        } while(!resp.equals("-1"));
+
+        input.close();
     }
 }
