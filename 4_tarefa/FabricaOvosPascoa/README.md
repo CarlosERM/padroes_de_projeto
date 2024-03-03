@@ -1,7 +1,9 @@
 ## Entregar o código via GitHub aqui até o dia 06/03
 
 Aberto: quarta, 13 abr 2022, 00:00
+
 Vencimento: quarta, 6 mar 2024, 23:59
+
 Você foi contratado para programar uma aplicação para uma distribuidora de ovos de páscoa.
 
 A distribuidora compra ovos de páscoa produzidos por 3 fábricas: Nestle, Garoto, Lacta
