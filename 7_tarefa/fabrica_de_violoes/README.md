@@ -2,6 +2,8 @@
 
 Link: [Diagrama](https://drive.google.com/file/d/1CQuLklqybIC98G5VfjNeIa-0aJy-QVVl/view?usp=sharing)
 
+Youtube: [Video](https://www.youtube.com/watch?v=z_iTHQmLS98)
+
 Aberto: terça, 8 jun 2021, 00:00
 Vencimento: quarta, 10 abr 2024, 23:59
 Utilizar o Padrão Prototype para criar e retratar o seguinte cenário:
