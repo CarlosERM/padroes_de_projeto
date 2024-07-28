@@ -9,7 +9,7 @@ public class App {
 
         servidor.registrar("carlos@gmail.com", "Pipoca@578");
         servidor.registrar("fernando@gmail.com", "Pipoca@571");
-        servidor.registrar("maria@gmail.com", "Pipoca@931");
+        servidor.registrar("maria@gmail.com", "Pipoca@123");
 
         ChainMiddleware chainMiddleware = ChainMiddleware.link(
             new UsuarioCadastradoChainMiddleware(servidor), 
@@ -17,7 +17,7 @@ public class App {
             new SenhaMinusculaChainMiddleware(),
             new SenhaCaractereEspecialChainMiddleware(),
             new SenhaNumeroChainMiddleware(),
-            // Consecutivo.
+            new SenhaConsecutivaChainMiddleware(),
             new Senha8CaractereChainMiddleware(),
             new Senha16CaractereChainMiddleware()
         );

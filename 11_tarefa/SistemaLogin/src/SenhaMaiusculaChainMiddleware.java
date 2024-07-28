@@ -19,5 +19,4 @@ public class SenhaMaiusculaChainMiddleware extends ChainMiddleware {
         System.out.println("A senha não tem nenhuma letra maiúscula!!!");
         return ehMaiuscula;
     }
-    
 }
