@@ -1,18 +1,11 @@
-## Getting Started
+## Enviar o PDF com o Link do GitHub aqui até 31/08
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+https://drive.google.com/file/d/1PAJUg3N5OdrL7FWIYjx5F3oF630uKe3A/view?usp=sharing
 
-## Folder Structure
+Aberto: quarta, 13 jan 2021, 00:00
 
-The workspace contains two folders by default, where:
+Vencimento: quarta, 4 set 2024, 23:59
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Tema Livre. Faça um sistema que use os Padrões Proxy, Decorator e mais um padrão de projetos a sua escolha. Deve ser apresentado a UML da aplicação explicando as classes utilizadas na criação do sistema. 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Obs.: O acesso ao banco de dados pode ser apenas simulado, sem a necessidade de se utlizar um SGBD.

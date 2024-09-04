@@ -1,5 +1,7 @@
 package AbstractFactory;
 
-public abstract class AbstractDrink extends RecheioProduct {
+import Decorator.IRecheio;
+
+public abstract class AbstractDrink implements IRecheio {
     
 }
